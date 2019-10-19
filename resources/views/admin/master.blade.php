@@ -47,7 +47,11 @@
 
 @yield('dashboardCategoryAdd')
 
+@yield('productAdd')
+
 @yield('dashboardCategoryShow')
+
+@yield('productShow')
 
 @yield('dashboardCategoryEdit')
 

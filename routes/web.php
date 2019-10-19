@@ -41,9 +41,23 @@ Route::get('/category/electronics','CategoryController@electronics');
 Route::get('/category/checkout','CategoryController@checkout');
 
 
+
 /*
-    ====================Admin Panel Dashboard Route ======================
+    ==================== Extra Category Route for Main Template ======================
 */
+// Route::post('/category/entry','CategoryController@categoryEntry');
+Route::get('/category/add','CategoryController@categoryAdd');
+Route::get('/category/show','CategoryController@categoryShow');
+Route::get('/category/edit/{id}','CategoryController@categoryEdit');
+Route::post('/category/update','CategoryController@categoryUpdate');
+Route::get('/category/delete/{delete_id}','CategoryController@categoryDelete');
+
+
+/*
+    ====================Admin Panel Dashboard category Route ======================
+*/
+
+    
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
@@ -57,11 +71,11 @@ Route::get('/dashboard/delete/{delete_id}','HomeController@delete')->name('dashb
 
 
 /*
-    ====================Category Route for Main Template ======================
+    ====================Product Category Route for Main Template ======================
 */
-// Route::post('/category/entry','CategoryController@categoryEntry');
-Route::get('/category/add','CategoryController@categoryAdd');
-Route::get('/category/show','CategoryController@categoryShow');
-Route::get('/category/edit/{id}','CategoryController@categoryEdit');
-Route::post('/category/update','CategoryController@categoryUpdate');
-Route::get('/category/delete/{delete_id}','CategoryController@categoryDelete');
+Route::post('/product/entry','ProductController@productEntry');
+Route::get('/product/add','ProductController@productAdd');
+Route::get('/product/show','ProductController@productShow');
+// Route::get('/product/edit/{id}','ProductController@productEdit');
+// Route::post('/product/update','ProductController@productUpdate');
+Route::get('/product/delete/{delete_id}','ProductController@productDelete');

@@ -42,10 +42,11 @@
 			<p align="center">
 				<a href="{{ url('/dashboard/show') }}" class="btn btn-primary" >Click to see All Category</a>
 			</p>
-
+			<h2 style="color: green;text-align: center;">{{ Session::get('message') }}</h2>
 			<div class="col-md-6 col-md-offset-3">
 				<div class="container-fluid">
 					<!-- <h4>Add Category</h4> -->
+
 					<label class="control-label" for="productname">Add New Category</label>
 					{!! Form::open(['url'=>'dashboard/entry','method'=>'post']) !!}
 						<div class="form-group has-success has-feedback">

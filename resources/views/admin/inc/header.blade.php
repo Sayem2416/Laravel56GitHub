@@ -259,6 +259,19 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Products<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ url('/product/add') }}">Add Products</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/product/show') }}">All Products</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                         
                         <li>
                             <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
