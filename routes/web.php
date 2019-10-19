@@ -15,7 +15,9 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'HomeController@home');
+// Route::get('/', 'HomeController@index');
+
+Route::get('/', 'AdminController@homeContent');
 
 Route::get('/category/menClothing','CategoryController@menClothing');
 
@@ -30,3 +32,6 @@ Route::get('/category/contact','CategoryController@contact');
 Route::get('/category/electronics','CategoryController@electronics');
 
 Route::get('/category/checkout','CategoryController@checkout');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
