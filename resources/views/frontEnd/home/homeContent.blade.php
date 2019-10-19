@@ -1,5 +1,63 @@
 @extends('frontEnd.master')
 
+@section('title',"Home Page")
+
+
+
+
+@section('banner')
+
+	<div class="banner-grid">
+	<div id="visual">
+			<div class="slide-visual">
+				<!-- Slide Image Area (1000 x 424) -->
+				<ul class="slide-group">
+					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg4.jpg" alt="Dummy Image" /></li>
+					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg3.jpg" alt="Dummy Image" /></li>
+					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg4.jpg" alt="Dummy Image" /></li>
+				</ul>
+
+				<!-- Slide Description Image Area (316 x 328) -->
+				<div class="script-wrap">
+					<ul class="script-group">
+						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion1.jpg" alt="Dummy Image" /></div></li>
+						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion2.jpg" alt="Dummy Image" /></div></li>
+						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion3.jpg" alt="Dummy Image" /></div></li>
+					</ul>
+					<div class="slide-controller">
+						<a href="#" class="btn-prev"><img src="{{ asset('frontEnd/images') }}/btn_prev.png" alt="Prev Slide" /></a>
+						<a href="#" class="btn-play"><img src="{{ asset('frontEnd/images') }}/btn_play.png" alt="Start Slide" /></a>
+						<a href="#" class="btn-pause"><img src="{{ asset('frontEnd/images') }}/btn_pause.png" alt="Pause Slide" /></a>
+						<a href="#" class="btn-next"><img src="{{ asset('frontEnd/images') }}/btn_next.png" alt="Next Slide" /></a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	<script type="text/javascript" src="{{ asset('frontEnd/js') }}/pignose.layerslider.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() {
+			$('#visual').pignoseLayerSlider({
+				play    : '.btn-play',
+				pause   : '.btn-pause',
+				next    : '.btn-next',
+				prev    : '.btn-prev'
+			});
+		});
+	//]]>
+	</script>
+
+</div>
+
+
+@endsection
+
+
+
+
+
 @section('mainContent')
 
 	<!-- content -->
@@ -143,14 +201,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a1.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Air Tshirt Black</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Air Tshirt Black</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -166,14 +224,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a2.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">1+1 Offer</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Next Blue Blazer</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Next Blue Blazer</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$99.99</span>
 										<del>$109.71</del>
@@ -189,14 +247,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a3.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Air Tshirt Black </a></h4>
+									<h4><a href="{{ url('/category/single') }}">Air Tshirt Black </a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$119.99</span>
 										<del>$120.71</del>
@@ -212,14 +270,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a4.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Maroon Puma Tshirt</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Maroon Puma Tshirt</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$79.99</span>
 										<del>$120.71</del>
@@ -235,14 +293,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a5.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">Combo Pack</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Multicoloured TShirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Multicoloured TShirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$129.99</span>
 										<del>$150.71</del>
@@ -258,14 +316,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a6.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Air Tshirt Black </a></h4>
+									<h4><a href="{{ url('/category/single') }}">Air Tshirt Black </a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$129.99</span>
 										<del>$150.71</del>
@@ -281,14 +339,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a7.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Dresses</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Dresses</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$129.99</span>
 										<del>$150.71</del>
@@ -304,14 +362,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a1.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Wedding Blazers</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Wedding Blazers</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$129.99</span>
 										<del>$150.71</del>
@@ -327,14 +385,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a3.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Dresses</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Dresses</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -350,14 +408,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a7.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html"> Shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}"> Shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -373,14 +431,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a5.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -396,14 +454,14 @@
 									<img src="{{ asset('frontEnd/images') }}/a4.jpg" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">T shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}">T shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -422,14 +480,14 @@
 									<img src="{{ asset('frontEnd/images') }}/w1.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Wedges</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Wedges</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -445,14 +503,14 @@
 									<img src="{{ asset('frontEnd/images') }}/w2.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Sandals</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Sandals</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -468,14 +526,14 @@
 									<img src="{{ asset('frontEnd/images') }}/mw1.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Casual Shoes</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Casual Shoes</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -491,14 +549,14 @@
 									<img src="{{ asset('frontEnd/images') }}/mw3.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Sport Shoes</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Sport Shoes</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -514,14 +572,14 @@
 									<img src="{{ asset('frontEnd/images') }}/ep2.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Watches</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -537,14 +595,14 @@
 									<img src="{{ asset('frontEnd/images') }}/ep3.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Watches</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -564,14 +622,14 @@
 									<img src="{{ asset('frontEnd/images') }}/g1.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Dresses</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Dresses</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -587,14 +645,14 @@
 									<img src="{{ asset('frontEnd/images') }}/g2.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html"> Shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}"> Shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -610,14 +668,14 @@
 									<img src="{{ asset('frontEnd/images') }}/g3.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -633,14 +691,14 @@
 									<img src="{{ asset('frontEnd/images') }}/mw2.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">T shirts</a></h4>
+									<h4><a href="{{ url('/category/single') }}">T shirts</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -656,14 +714,14 @@
 									<img src="{{ asset('frontEnd/images') }}/w4.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Air Tshirt Black Domyos</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Air Tshirt Black Domyos</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -679,14 +737,14 @@
 									<img src="{{ asset('frontEnd/images') }}/w3.png" alt="" class="pro-image-back">
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
+												<a href="{{ url('/category/single') }}" class="link-product-add-cart">Quick View</a>
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
 										
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Hand Bags</a></h4>
+									<h4><a href="{{ url('/category/single') }}">Hand Bags</a></h4>
 									<div class="info-product-price">
 										<span class="item_price">$45.99</span>
 										<del>$69.71</del>
@@ -703,58 +761,5 @@
 	</div>
 </div>
 <!-- //product-nav -->
-
-@endsection
-
-
-
-
-
-@section('banner')
-
-	<div class="banner-grid">
-	<div id="visual">
-			<div class="slide-visual">
-				<!-- Slide Image Area (1000 x 424) -->
-				<ul class="slide-group">
-					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg4.jpg" alt="Dummy Image" /></li>
-					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg3.jpg" alt="Dummy Image" /></li>
-					<li><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft_bg4.jpg" alt="Dummy Image" /></li>
-				</ul>
-
-				<!-- Slide Description Image Area (316 x 328) -->
-				<div class="script-wrap">
-					<ul class="script-group">
-						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion1.jpg" alt="Dummy Image" /></div></li>
-						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion2.jpg" alt="Dummy Image" /></div></li>
-						<li><div class="inner-script"><img class="img-responsive" src="{{ asset('frontEnd/images') }}/soft-fashion3.jpg" alt="Dummy Image" /></div></li>
-					</ul>
-					<div class="slide-controller">
-						<a href="#" class="btn-prev"><img src="{{ asset('frontEnd/images') }}/btn_prev.png" alt="Prev Slide" /></a>
-						<a href="#" class="btn-play"><img src="{{ asset('frontEnd/images') }}/btn_play.png" alt="Start Slide" /></a>
-						<a href="#" class="btn-pause"><img src="{{ asset('frontEnd/images') }}/btn_pause.png" alt="Pause Slide" /></a>
-						<a href="#" class="btn-next"><img src="{{ asset('frontEnd/images') }}/btn_next.png" alt="Next Slide" /></a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	<script type="text/javascript" src="{{ asset('frontEnd/js') }}/pignose.layerslider.js"></script>
-	<script type="text/javascript">
-	//<![CDATA[
-		$(window).load(function() {
-			$('#visual').pignoseLayerSlider({
-				play    : '.btn-play',
-				pause   : '.btn-pause',
-				next    : '.btn-next',
-				prev    : '.btn-prev'
-			});
-		});
-	//]]>
-	</script>
-
-</div>
-
 
 @endsection

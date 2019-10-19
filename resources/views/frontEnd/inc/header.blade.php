@@ -12,7 +12,7 @@
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="{{ asset('frontEnd/images') }}/logo.png"></a></h1>
+			<h1><a href="{{ url('/') }}"><img src="{{ asset('frontEnd/images') }}/logo.png"></a></h1>
 		</div>
 		<div class="col-md-6 Soft-header-middle">
 			<form>
@@ -68,7 +68,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ url('/') }}">Home<span class="sr-only">(current)</span></a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
@@ -78,7 +78,7 @@
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="mens.html">Clothing</a></li>
+											<li><a href="{{ url('/category/menClothing') }}">Clothing</a></li>
 											<li><a href="mens.html">Wallets</a></li>
 											<li><a href="mens.html">Footwear</a></li>
 											<li><a href="mens.html">Watches</a></li>
@@ -108,7 +108,7 @@
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Clothing</a></li>
+											<li><a href="{{ url('/category/womenClothing') }}">Clothing</a></li>
 											<li><a href="womens.html">Wallets</a></li>
 											<li><a href="womens.html">Footwear</a></li>
 											<li><a href="womens.html">Watches</a></li>
@@ -135,9 +135,9 @@
 								</div>
 							</ul>
 					</li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ url('/category/electronics') }}">Electronics</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ url('/category/shortCode') }}">Short Codes</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ url('/category/contact') }}">contact</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -145,7 +145,7 @@
 		</div>
 		<div class="top_nav_right">
 			<div class="cart soft_box_1">
-						<a href="checkout.html">
+						<a href="{{ url('/category/checkout') }}">
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>

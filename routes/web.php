@@ -16,3 +16,17 @@
 // });
 
 Route::get('/', 'HomeController@home');
+
+Route::get('/category/menClothing','CategoryController@menClothing');
+
+Route::get('/category/womenClothing','CategoryController@womenClothing');
+
+Route::get('/category/single','CategoryController@single');
+
+Route::get('/category/shortCode','CategoryController@shortCode');
+
+Route::get('/category/contact','CategoryController@contact');
+
+Route::get('/category/electronics','CategoryController@electronics');
+
+Route::get('/category/checkout','CategoryController@checkout');
