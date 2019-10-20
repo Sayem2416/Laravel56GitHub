@@ -47,7 +47,11 @@ class ProductController extends Controller
         return redirect()->back()->with('message','Product Inserted Successfully');
     }
     public function productShow(){
-        $product = product::paginate(7);
+<<<<<<< HEAD
+        // $product = product::paginate(7);
+=======
+        // $product = product::paginate(7);
+>>>>>>> 286a217... Class-07-HW-(16.10.19)Product Add and Table Relation-Picture Upload with Rename
         // dd($product);
 
         return view('admin.product.product-show',['product'=>$product]);
