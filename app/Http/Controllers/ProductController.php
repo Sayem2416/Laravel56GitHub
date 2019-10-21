@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\product;
+use DB;
 class ProductController extends Controller
 {
     public function productAdd(){
-    	$category = Category::all();
+    	$category = Category::all()->where('publicationStatus','=','1');
     	return view('admin.product.product-add',['category'=>$category]);
     }
     public function productEntry(Request $request){
@@ -47,16 +48,26 @@ class ProductController extends Controller
         return redirect()->back()->with('message','Product Inserted Successfully');
     }
     public function productShow(){
-<<<<<<< HEAD
         // $product = product::paginate(7);
-=======
-        // $product = product::paginate(7);
->>>>>>> 286a217... Class-07-HW-(16.10.19)Product Add and Table Relation-Picture Upload with Rename
-        // dd($product);
+        // dd($product->all());
+
+        $product = DB::table('products')
+                    ->join('categories','categories.id','=','cat_id')
+                    ->select('products.*','categories.*','products.id as pid','categories.id as cid','products.publicationStatus as productStatus')
+                    // ->where('products.publicationStatus', '=','1')
+                    ->get();
+
+        
+
 
         return view('admin.product.product-show',['product'=>$product]);
     }
-     public function productDelete($did){
+    public function productEdit($x){
+        $categoryById = Category::where('id',$x)->first();
+
+        return view('admin.product.product-edit',['categoryById'=>$categoryById]);
+    }
+    public function productDelete($did){
         $productDelete = product::find($did);
         $productDelete->delete();
         return redirect('/product/show')->with('message','Product Deleted Successfully from Admin Panel');

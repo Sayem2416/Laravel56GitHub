@@ -137,6 +137,28 @@ class HomeController extends Controller
         return redirect('/dashboard/show')->with('message','Category Deleted Successfully from Admin Panel');
         
     }
+    public function categoryPBS($id){
+        $categorySelect = Category::where('id',$id)->first();
+
+        // echo $categorySelect->publicationStatus;
+
+        if($categorySelect->publicationStatus==1){
+            $pbs =2;
+        }
+        else{
+            $pbs =1;
+        }
+
+        // echo $pbs;
+
+        // return $categorySelect->id;
+
+        $categoryPBSU = Category::find($categorySelect->id);
+        $categoryPBSU->publicationStatus = $pbs;
+        $categoryPBSU->save();
+        return redirect()->back();
+
+    }
 
 
 }

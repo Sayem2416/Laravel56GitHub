@@ -68,6 +68,7 @@ Route::get('/dashboard/show', 'HomeController@show')->name('dashboard');
 Route::get('/dashboard/edit/{id}','HomeController@edit')->name('dashboard');
 Route::post('/dashboard/update','HomeController@update')->name('dashboard');
 Route::get('/dashboard/delete/{delete_id}','HomeController@delete')->name('dashboard');
+Route::get('/status/edit/{pbs_id}','HomeController@categoryPBS');
 
 
 /*
@@ -76,6 +77,6 @@ Route::get('/dashboard/delete/{delete_id}','HomeController@delete')->name('dashb
 Route::post('/product/entry','ProductController@productEntry');
 Route::get('/product/add','ProductController@productAdd');
 Route::get('/product/show','ProductController@productShow');
-// Route::get('/product/edit/{id}','ProductController@productEdit');
+Route::get('/product/edit/{id}','ProductController@productEdit');
 // Route::post('/product/update','ProductController@productUpdate');
 Route::get('/product/delete/{delete_id}','ProductController@productDelete');

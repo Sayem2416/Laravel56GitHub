@@ -45,7 +45,11 @@
 			<td>{{ $i++ }}</td>
 			<td>{{ $cat->categoryName }}</td>
 			<td>{{ $cat->categoryDescription }}</td>
-			<td>{{ ($cat->publicationStatus == 1)? 'Published' : 'Unpublished' }}</td>
+			<td>
+				<a href="{{ url('/status/edit/'.$cat->id) }}" class="btn-sm btn btn-default">
+					{{ ($cat->publicationStatus == 1)? 'Published' : 'Unpublished' }}
+				</a>
+			</td>
 			<td><a style="color: black;" href="{{ url('/dashboard/edit/'.$cat->id) }}" class="btn btn-primary"> Edit </a> |
 				<a style="color: black;" href="{{ url('/dashboard/delete/'.$cat->id) }}" onclick="return confirm('Are You Sure To Delete')" class="btn btn-danger"> Delete </a>
 			</td>
